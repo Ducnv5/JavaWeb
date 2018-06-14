@@ -7,12 +7,16 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import entity.Article;
 import entity.User;
 import entity.student;
 import imic.com.springmvchello.entities.*;
@@ -100,9 +104,35 @@ public class Hompage {
 		System.out.println("in login ");
 		if (!model.containsAttribute("user")) {
 			model.addAttribute("user", new User());
+			System.out.println("in login add user");
 		}
-		return "Homepage/login";
+		return "HomePage/login";
 	}
 	
+	@RequestMapping(value = "addarticle", method = RequestMethod.POST)
+	public String addArticle(@ModelAttribute("user") @Validated User user, BindingResult result) {
+		System.out.println("in addarticle ");
+		if (result.hasErrors()) {
+			for (ObjectError objectError: result.getAllErrors()) {
+				System.out.println(objectError);
+				System.out.println(objectError.getCode());
+			}
+			return "HomePage/login";
+		}
+		return "InputArticle/newArticle";
+	}
+	
+	@RequestMapping(value = "addarticle", method = RequestMethod.POST)
+	public String saveArticle(@ModelAttribute("article") @Validated Article article, BindingResult result) {
+		System.out.println("in addarticle ");
+		if (result.hasErrors()) {
+			for (ObjectError objectError: result.getAllErrors()) {
+				System.out.println(objectError);
+				System.out.println(objectError.getCode());
+			}
+			return "InputArticle/newArticle";
+		}
+		return "HomePage/HomePage";
+	}
 
 }

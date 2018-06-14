@@ -9,17 +9,15 @@
 <!-- <link rel="stylesheet" type="text/css" href="/resources/css/header.css"> -->
 <link href="<c:url value="/resources/css/header.css" />" rel="stylesheet">
 <!-- css/header.css -->
-<title>Login</title>
+<title>Input new article</title>
 </head>
 <body>
-Please input user name and password
-<h2>
-         <form:form action="addarticle" method="POST" modelAttribute="user">
-		user name: <form:input path="userName"/> <form:errors path="userName" cssClass="error"/> <br/><br/>
-		password: <form:input path="password"/> <form:errors path="password" cssClass="error"/> <br/><br/>
-     <button type="submit">Submit</button>
+	<form:form action="savearticle" method="POST" modelAttribute="article">
+		header: <form:input path="header"/> <form:errors path="header" cssClass="error"/> <br/><br/>
+		segment: <form:input path="segment"/> <form:errors path="segment" cssClass="error"/> <br/><br/>
+		group: <form:input path="group"/> <form:errors path="group" cssClass="error"/> <br/><br/>
+		body: <form:input path="body"/> <form:errors path="body" cssClass="error"/> <br/><br/>
+     	<button type="submit">Submit</button>
 	</form:form>
-</h2>
-
 </body>
 </html>
