@@ -11,6 +11,10 @@
 <title>Home page foreach</title>
 </head>
 <body>
+<form action="login" method = POST>
+	<button type="submit">Log in</button>
+</form>
+<br>
 <c:forEach var = "i" items = "${students}">
          <tr><td><a href="article/${i.id}" >id:  <c:out value = "${i.id}"/></a></td><br>
          <td>name:  <c:out value = "${i.name}"/></td><br>

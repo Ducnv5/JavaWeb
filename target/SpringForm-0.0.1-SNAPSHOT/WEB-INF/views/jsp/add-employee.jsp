@@ -50,5 +50,11 @@
 			</tr>
 		</table>
 	</form:form>
+	
+	<form action="info" method="get">
+    	<input type="submit" value="Go to information" 
+         name="Submit" id="frm1_submit" />
+	</form>
+	
 </body>
 </html>

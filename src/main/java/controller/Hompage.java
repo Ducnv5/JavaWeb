@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import entity.User;
 import entity.student;
 import imic.com.springmvchello.entities.*;
 import model.*;
@@ -29,7 +30,7 @@ public class Hompage {
 		student std4 = new student("Igor Lazkozar", 12);
 		arr.add(std4);arr.add(std3);arr.add(std2);arr.add(std1);
 		model.addAttribute("students", arr);
-		System.out.println("id request to id: ");
+		System.out.println("home page handler: ");
 
 		return "HomePage/HomePage";
 	}
@@ -37,7 +38,7 @@ public class Hompage {
 	@RequestMapping(value= {"/", "/homepage"}, method = RequestMethod.POST)
 	public String HomePagePost(Model model) {
 
-		return "homepage";
+		return "HomePage/HomePage";
 	}
 
 	@RequestMapping(value= "article/{id}", method = RequestMethod.GET)
@@ -84,4 +85,24 @@ public class Hompage {
 		model.addAttribute("std", std);
 		return "HomePage/dropDown";
 	}
+	
+/*	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String doLogin(Model model) {
+		System.out.println("in /login ");
+		if (!model.containsAttribute("user")) {
+			model.addAttribute("user", new User());
+		}
+		return "login";
+	}*/
+	
+	@RequestMapping(value = "login", method = RequestMethod.POST)
+	public String doLogin2(Model model) {
+		System.out.println("in login ");
+		if (!model.containsAttribute("user")) {
+			model.addAttribute("user", new User());
+		}
+		return "Homepage/login";
+	}
+	
+
 }
