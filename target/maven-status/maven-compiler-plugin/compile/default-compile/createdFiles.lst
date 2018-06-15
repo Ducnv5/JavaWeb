@@ -1,8 +1,7 @@
 entity\User.class
-imic\com\springmvchello\entities\Employee.class
-imic\com\springmvchello\controller\EmployeeController.class
 model\GetArticle.class
-imic\com\springmvchello\entities\Info.class
+controller\HomePage.class
+entity\HeaderItem.class
 entity\student.class
-controller\Hompage.class
 entity\Article.class
+model\GetHeaderItems.class
