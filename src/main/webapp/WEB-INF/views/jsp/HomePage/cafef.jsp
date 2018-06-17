@@ -92,59 +92,40 @@
 <body>
  <form method="post" action="" id="form1">
  <div class="">
-<div class="tinmoi">
-    <div class="title_box">
-        <p class="title_left">TIN MỚI!</p>
-        <a href="/doc-nhanh.chn" title="đọc nhanh" class="doctinnhanh">Đọc nhanh >></a>
-    </div>
-    <div class="clearfix"></div>
-    <div class="list_news">
-        <div id="listNewHeader" dmtb="4">
-            <ul>
-            <c:forEach var="h" items="${headers}">
-            	<li data-id="20180615135738875">
-            		<span class="time" data-month="06" data-date="15">14:03</span>
-            		<span class="border_split"></span>
-            		<a title="Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019" href="/chua-dua-vu-thu-thiem-avg-vao-chuong-trinh-giam-sat-quoc-hoi-nam-2019-20180615135738875.chn">
-            			<span class="inner">Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019</span>
-            		</a>
-            	</li>
-            	
-            </c:forEach>
-            </ul>
-        </div>
-        <script>
-    		(runinit = window.runinit || []).push(function () {
-        	setTimeout(function () {
-            if (typeof sendLogCafefScroll === "function") {
+
+<div class="header clearfix">
+	<div class="header_new clearfix">
+		<div class="wp1040">
+			<div class="tinmoi">
+				<div class="title_box">
+	        		<p class="title_left">TIN MỚI!</p>
+	        		<a href="/doc-nhanh.chn" title="đọc nhanh" class="doctinnhanh">Đọc nhanh >></a>
+	    		</div>
+	    		<div class="clearfix"></div>
+				<div class="list_news">
+					<div id="listNewHeader" dmtb="4">
+						<ul>
+				            <c:forEach var="h" items="${headers}">
+				            	<li data-id="20180615135738875">
+				            		<span class="time" data-month="06" data-date="15">14:03</span>
+				            		<span class="border_split"></span>
+				            		<a title="Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019" href="/chua-dua-vu-thu-thiem-avg-vao-chuong-trinh-giam-sat-quoc-hoi-nam-2019-20180615135738875.chn">
+				            			<span class="inner">Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019</span>
+				            		</a>
+				            	</li>
+				            </c:forEach>
+	            		</ul>
+					</div>
+				</div>
+			</div>
+			<script>
+    			(runinit = window.runinit || []).push(function () {
+        		setTimeout(function () {
+            	if (typeof sendLogCafefScroll === "function") {
                 sendLogCafefScroll('listNewHeader', 155);}}, 1000);});
-		</script>
-        
-        
-		<div class="bieudo_header">
-		    <div class="bieudo1">
-		        <p class="index_ck">VN-Index:
-		            <b class="idx_1"></b> <span class="idc_1"></span> <span class="idp_1"></span>
-		        </p>
-		        <p class="gia_ck">GTGD: <span class="idv_1"></span> tỷ VNĐ</p>
-		        <div id="headerchart1" class="img_bieudo"></div>
-		    </div>
-		    <div class="bieudo2">
-		        <p class="index_ck">HNX-Index:
-		            <b class="idx_2"></b> <span class="idc_2"></span> <span class="idp_2"></span>
-		        </p>
-		        <p class="gia_ck">GTGD: <span class="idv_2"></span> tỷ VNĐ</p>
-		        <div id="headerchart2" class="img_bieudo"></div>
-		    </div>
+			</script>
 		</div>
-
-<script type="text/javascript">
-    var currentTime = parseFloat('162601');
-</script>
-        
-    </div>
-</div>
-
+	</div>
 
     <div class="menucategory menuheader clearfix" id="menu_wrap">
         <div class="wp1040 relative">
@@ -159,6 +140,36 @@
             </ul>
         </div>
     </div>
+</div>
+<div class="wp1040">
+	<div class="content">
+    	<div class="noibat_home clearfix">
+        	<div class="news_left">
+            	<div class="top5_news">
+                	<ul class="listchungkhoannew">
+                	<li class="tlitem clearfix top" data-newsid="20180617221307997">
+			            <a class="avatar "  href="/hat-dieu-viet-nam-can-lam-mot-dau-tau-20180617221307997.chn" 
+			            title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!">
+			            	<img src="http://cafefcdn.com/zoom/260_162/2018/6/17/photo1529248311779-15292483117791461895081.jpg" 
+			            	alt="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!" title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!" />
+			            </a>
+			            
+			            <div class="knswli-right">
+			                <h3><a href="/hat-dieu-viet-nam-can-lam-mot-dau-tau-20180617221307997.chn" title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!">H?t di?u Vi?t Nam: C?n l?m m?t d?u tàu!</a></h3>
+			                <p class="time_cate ">
+			                    <a href="thi-truong.chn" title="Th? tru?ng">Th? tru?ng</a> 
+			                    <span class="gachngoai">-<span> 
+			                    <span class="time" title="2018-06-17T22:16:28"></span>
+			                </p>
+			                <p class="sapo">Đã tới lúc ngành điều cần vai trò của một lực lượng đủ mạnh để có thể “cầm trịch” giữ quyền chi phối giá cả cho mặt hàng mà Việt Nam đang dẫn đầu khâu chế biến và xuất khẩu của</p>
+			            </div>
+        			</li>
+                   	</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </div>    
 </form>
 

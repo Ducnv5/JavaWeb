@@ -90,32 +90,36 @@
 
 
 <body>
+ <form method="post" action="" id="form1">
+ <div class="">
 
-<div class="tinmoi">
-    <div class="title_box">
-        <p class="title_left">TIN MỚI!</p>
-        <a href="/doc-nhanh.chn" title="đọc nhanh" class="doctinnhanh">Đọc nhanh >></a>
-    </div>
-    <div class="clearfix"></div>
-    <div class="list_news">
-        <div id="listNewHeader" dmtb="4">
-            <ul>
-            <c:forEach var="h" items="${headers}">
-            	<li data-id="20180615135738875">
-            		<span class="time" data-month="06" data-date="15">14:03</span>
-            		<span class="border_split"></span>
-            		<a title="Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019" href="/chua-dua-vu-thu-thiem-avg-vao-chuong-trinh-giam-sat-quoc-hoi-nam-2019-20180615135738875.chn">
-            			<span class="inner">Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019</span>
-            		</a>
-            	</li>
-            	
-            </c:forEach>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
+<div class="header clearfix">
+	<div class="header_new clearfix">
+		<div class="wp1040">
+			<div class="tinmoi">
+				<div class="title_box">
+	        		<p class="title_left">TIN MỚI!</p>
+	        		<a href="/doc-nhanh.chn" title="đọc nhanh" class="doctinnhanh">Đọc nhanh >></a>
+	    		</div>
+	    		<div class="clearfix"></div>
+				<div class="list_news">
+					<div id="listNewHeader" dmtb="4">
+						<ul>
+				            <c:forEach var="h" items="${headers}">
+				            	<li data-id="20180615135738875">
+				            		<span class="time" data-month="06" data-date="15">14:03</span>
+				            		<span class="border_split"></span>
+				            		<a title="Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019" href="/chua-dua-vu-thu-thiem-avg-vao-chuong-trinh-giam-sat-quoc-hoi-nam-2019-20180615135738875.chn">
+				            			<span class="inner">Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019</span>
+				            		</a>
+				            	</li>
+				            </c:forEach>
+	            		</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
     <div class="menucategory menuheader clearfix" id="menu_wrap">
         <div class="wp1040 relative">
@@ -130,7 +134,9 @@
             </ul>
         </div>
     </div>
-
+</div>
+</div>    
+</form>
 
 </body>
 </html>
