@@ -110,15 +110,6 @@ public class HomePage {
 		return "login";
 	}*/
 	
-	@RequestMapping(value = "login", method = RequestMethod.POST)
-	public String doLogin2(Model model) {
-		System.out.println("in login ");
-		if (!model.containsAttribute("user")) {
-			model.addAttribute("user", new User());
-			System.out.println("in login add user");
-		}
-		return "HomePage/login";
-	}
 	
 	@RequestMapping(value = "addarticle", method = RequestMethod.POST)
 	public String addArticle(@ModelAttribute("user") @Validated User user, BindingResult result) {
