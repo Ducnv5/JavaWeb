@@ -86,6 +86,23 @@
             el.parentNode.insertBefore(s, el);
         })();
     </script>
+   <style type="text/css">
+   	.listNewHeader {overflow:scroll; /* overflow:hidden */
+   	 border:1px solid black;}
+   	 .list_news{margin-top:1px;display:block;height:160px;overflow:hidden;position:relative;width:500px} 
+   	 .header_new .list section li:last-child{border:0}
+   	 .header_new .list_news ul li{position:relative;padding:4px 10px 4px 0;white-space:nowrap;overflow:hidden;border-top:1px solid #f0f0f0;max-width:460px}
+   	 .header_new .list_news ul li:first-child{margin-top:3px;border-top:1px solid #f0f0f0}
+   	 .header_new .list_news ul li.bg{background:#e7ebf1}
+   	 .header_new .list_news ul li.end{border-bottom:1px solid #fff}
+   	 .header_new .list_news ul li a,.header_new .list_news ul li .time{display:inline-block;vertical-align:top;max-width:420px}
+   	 .header_new .list_news ul li a span.inner{font-size:12px;line-height:16px;color:#0b75b1;white-space:normal;display:block;font-family:Arial;padding-top:1px;font-weight:bold}
+   	 .header_new .list_news ul li .time{padding-right:8px;font-size:12px;line-height:18px;color:#666;font-family:Arial;width:30px}
+   	 .header_new .list_news ul li span.border{display:inline-block;width:1px;height:20px;border-right:1px dotted #ccc;margin:0 10px;vertical-align:-5px}
+   	 .header_new .list_news .border_split{display:inline-block;border-left:1px solid #e4e4e4;margin-top:4px;margin-right:10px}
+   	 .header_new .list{display:block}.header_new .bieudock{float:right;margin-top:25px}
+   </style> 
+    
 </head>
 
 
@@ -104,7 +121,7 @@
 	    		<div class="clearfix"></div>
 				<div class="list_news">
 					<div id="listNewHeader" dmtb="4">
-						<ul>
+						<ul style="overflow: scroll">
 				            <c:forEach var="h" items="${headers}">
 				            	<li data-id="20180615135738875">
 				            		<span class="time" data-month="06" data-date="15">14:03</span>
@@ -118,6 +135,12 @@
 					</div>
 				</div>
 			</div>
+			<script>
+    			(runinit = window.runinit || []).push(function () {
+        		setTimeout(function () {
+            	if (typeof sendLogCafefScroll === "function") {
+                sendLogCafefScroll('listNewHeader', 155);}}, 1000);});
+			</script>
 		</div>
 	</div>
 
@@ -135,8 +158,37 @@
         </div>
     </div>
 </div>
+<div class="wp1040">
+	<div class="content">
+    	<div class="noibat_home clearfix">
+        	<div class="news_left">
+            	<div class="top5_news">
+                	<ul class="listchungkhoannew">
+                	<li class="tlitem clearfix top" data-newsid="20180617221307997">
+			            <a class="avatar "  href="/hat-dieu-viet-nam-can-lam-mot-dau-tau-20180617221307997.chn" 
+			            title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!">
+			            	<img src="http://cafefcdn.com/zoom/260_162/2018/6/17/photo1529248311779-15292483117791461895081.jpg" 
+			            	alt="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!" title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!" />
+			            </a>
+			            
+			            <div class="knswli-right">
+			                <h3><a href="/hat-dieu-viet-nam-can-lam-mot-dau-tau-20180617221307997.chn" title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!">H?t di?u Vi?t Nam: C?n l?m m?t d?u tàu!</a></h3>
+			                <p class="time_cate ">
+			                    <a href="thi-truong.chn" title="Th? tru?ng">Th? tru?ng</a> 
+			                    <span class="gachngoai">-<span> 
+			                    <span class="time" title="2018-06-17T22:16:28"></span>
+			                </p>
+			                <p class="sapo">Đã tới lúc ngành điều cần vai trò của một lực lượng đủ mạnh để có thể “cầm trịch” giữ quyền chi phối giá cả cho mặt hàng mà Việt Nam đang dẫn đầu khâu chế biến và xuất khẩu của</p>
+			            </div>
+        			</li>
+                   	</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </div>    
 </form>
-
+<a href="/login">Login</a>
 </body>
 </html>
