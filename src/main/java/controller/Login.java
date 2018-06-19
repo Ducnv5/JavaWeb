@@ -29,19 +29,22 @@ public class Login {
 	public String login(@RequestParam(value = "error", required = false) final String error, final Model model) {
 		if (error != null) {
 			model.addAttribute("message", "Login Failed!");
+			System.out.println("login fail");
 		}
-		return "login";
+		return "HomePage/login";
 	}
 
 	@RequestMapping("/admin")
 	public String admin() {
-		return "admin";
+		System.out.println("login pass");
+		return "HomePage/admin";
 	}
 
 	@RequestMapping("/logout")
 	public String logout(final Model model) {
 		model.addAttribute("message", "Logged out!");
-		return "login";
+		System.out.println("log out");
+		return "HomePage/login";
 	}
 
 }
