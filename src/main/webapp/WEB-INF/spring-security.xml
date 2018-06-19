@@ -6,19 +6,21 @@
 
 	<http auto-config="true">
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
-		<form-login login-page="/login" login-processing-url="/j_spring_security_login"
-			default-target-url="/admin" authentication-failure-url="/login?error"
-			username-parameter="username" password-parameter="password" />
+		<form-login
+		    login-page="/login"
+		    login-processing-url="/j_spring_security_login"
+		    default-target-url="/admin"
+			authentication-failure-url="/login?error"
+			username-parameter="username"
+			password-parameter="password" />
 		<logout logout-url="/j_spring_security_logout"
 			logout-success-url="/logout" delete-cookies="JSESSIONID" />
-
-		<remember-me key="uniqueAndSecret" token-validity-seconds="1296000"/>
 	</http>
 
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>
-				<user name="ito" password="{noop}123456" authorities="ROLE_ADMIN" />
+				<user name="admin" password="{noop}123456" authorities="ROLE_ADMIN" />
 			</user-service>
 		</authentication-provider>
 	</authentication-manager>
