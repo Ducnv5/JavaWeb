@@ -163,7 +163,7 @@
     	<div class="noibat_home clearfix">
         	<div class="news_left">
             	<div class="top5_news">
-                	<ul class="listchungkhoannew">
+                	<!-- <ul class="listchungkhoannew">
                 	<li class="tlitem clearfix top" data-newsid="20180617221307997">
 			            <a class="avatar "  href="/hat-dieu-viet-nam-can-lam-mot-dau-tau-20180617221307997.chn" 
 			            title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!">
@@ -181,7 +181,7 @@
 			                <p class="sapo">Đã tới lúc ngành điều cần vai trò của một lực lượng đủ mạnh để có thể “cầm trịch” giữ quyền chi phối giá cả cho mặt hàng mà Việt Nam đang dẫn đầu khâu chế biến và xuất khẩu của</p>
 			            </div>
         			</li>
-                   	</ul>
+                   	</ul> -->
 				</div>
 			</div>
 		</div>
