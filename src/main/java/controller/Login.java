@@ -31,7 +31,7 @@ public class Login {
 			model.addAttribute("message", "Login Failed!");
 			System.out.println("login fail");
 		}
-		return "HomePage/login";
+		return "/login";
 	}
 
 	@RequestMapping("/admin")
@@ -44,7 +44,7 @@ public class Login {
 	public String logout(final Model model) {
 		model.addAttribute("message", "Logged out!");
 		System.out.println("log out");
-		return "HomePage/login";
+		return "/login";
 	}
 
 }
