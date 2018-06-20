@@ -48,19 +48,22 @@ public class HomePage {
 		model.addAttribute("headers", header);
 		model.addAttribute("art", art);
 		model.addAttribute("input_time", str);
+
+		System.out.println("home page handler id: " + art.getId());
 		
 		return "HomePage/cafef";
 	}
 
 	@RequestMapping(value= "/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	public String ArticleId(@PathVariable("id") int id, Model model) {
+	public String ArticleId(@PathVariable("id") String id, Model model) {
 		Article art = GetArticle.getSingleArticle();
 		model.addAttribute("art", art);
 
-		System.out.println("request to id: " + id);
+		System.out.println("detail request to id: " + id);
 
-		return "ArticleDetail/detail";
+		//return "ArticleDetail/detail";
+		return "HomePage/cafef";
 	}
 	
 	@RequestMapping(value = "addarticle", method = RequestMethod.POST)
