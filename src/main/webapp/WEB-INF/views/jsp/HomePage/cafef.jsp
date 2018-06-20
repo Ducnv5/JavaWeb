@@ -124,7 +124,7 @@
 						<ul style="overflow: scroll">
 				            <c:forEach var="h" items="${headers}">
 				            	<li data-id="20180615135738875">
-				            		<span class="time" data-month="06" data-date="15">${art.input_time}</span>
+				            		<span class="time" data-month="06" data-date="15">${input_time}</span>
 				            		<span class="border_split"></span>
 				            		<a title="${art.header}" href="/${art.id}">
 				            			<span class="inner">${art.header}</span>

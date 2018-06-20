@@ -193,7 +193,8 @@
 			<div class="left_cate totalcontentdetail">
 				<div class="w640 clear fr">
 					<div class="media"> image big</div>
-					<h2 class="sapo"> long header</h2>
+					<img src="${art.href_2}"/>
+					<h2 class="sapo"> ${art.preview}</h2>
 					<div class="contentdetail" id="contentdetail">
 						<div class="tindnd clearfix style="display:block;">
 							<div id="listNewsInContent">

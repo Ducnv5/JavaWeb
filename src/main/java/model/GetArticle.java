@@ -28,7 +28,9 @@ public class GetArticle {
 		art.setHref_2("http://cafefcdn.com/2018/6/20/photo-1-1529483942682886471747.jpg");
 		art.setId("bai-bao-1");
 		art.setGroup("kinh-te");
-		art.setPreview("Tây Ninh vốn nổi tiếng với diện tích cao su 100 ngàn ha, mía 25 ngàn ha, 50 ngàn ha mì... nhưng gần đây do giá trị nông sản này thấp nên đang có bước dịch chuyển mới sang trồng rau quả, trong đó cây ăn quả là chủ lực.\r\n" + 
+		art.setPreview("Tây Ninh vốn nổi tiếng với diện tích cao su 100 ngàn ha, mía 25 ngàn ha, 50 ngàn ha mì... "
+				+ "nhưng gần đây do giá trị nông sản này thấp nên đang có bước dịch chuyển mới sang "
+				+ "trồng rau quả, trong đó cây ăn quả là chủ lực.\r\n" + 
 				"");
 		art.setBody("Cũng theo ông Hưng, trồng 1ha cam, quýt khoảng 3 năm rưỡi, tức 42 tháng, chi phí đầu tư 400-500 triệu;"
 				+ " còn nhãn, sầu riêng thấp hơn,&nbsp;khoảng 150 triệu. Dự kiến năm 2019 thu hoạch, năng suất cam quýt "

@@ -37,14 +37,6 @@ public class Article {
 	
 	private String id;
 	
-	public Article(String header, String body, String group, String segment, String id)
-	{
-		this.id = id;
-		this.header = header;
-		this.body = body;
-		this.segment = segment;
-		this.group = group;
-	}
 	public Article()
 	{
 		
@@ -110,7 +102,7 @@ public class Article {
 	
 	public String getId()
 	{
-		return header;
+		return id;
 	}
 	
 	public void setHeader(String header)

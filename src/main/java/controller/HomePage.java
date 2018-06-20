@@ -3,6 +3,7 @@ package controller;
 import java.nio.charset.StandardCharsets;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -32,13 +33,6 @@ public class HomePage {
 
 	@RequestMapping(value= {"/", "/homepage"}, method = RequestMethod.GET, produces="application/x-www-form-urlencoded;charset=UTF-8")
 	public String HomePage(Model model, HttpServletRequest request, HttpServletResponse response ) throws UnsupportedEncodingException {
-		/*ArrayList<student> arr = new ArrayList<student>();
-		student std1 = new student("nguyen van a", 1);
-		student std2 = new student("nguyen van B", 167);
-		student std3 = new student("Jon Janses Campous", 341);
-		student std4 = new student("Igor Lazkozar", 12);
-		arr.add(std4);arr.add(std3);arr.add(std2);arr.add(std1);
-		model.addAttribute("students", arr);*/
 		StandardCharsets.UTF_8.name();
 		response.setContentType("text/html;charset=UTF-8");
 		request.setCharacterEncoding("utf-8");
@@ -47,21 +41,26 @@ public class HomePage {
 		ArrayList<HeaderItem> header = GetHeaderItems.GetHeaderItems();
 		Article art = GetArticle.getSingleArticle();
 		
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(art.getInput_time());
+		String str = cal.get(Calendar.HOUR_OF_DAY) + ":" + cal.get(Calendar.MINUTE);
+		
 		model.addAttribute("headers", header);
 		model.addAttribute("art", art);
+		model.addAttribute("input_time", str);
+		
 		return "HomePage/cafef";
 	}
 
-	@RequestMapping(value= "article/{id}", method = RequestMethod.GET)
+	@RequestMapping(value= "/{id}", method = RequestMethod.GET)
 	@ResponseBody
 	public String ArticleId(@PathVariable("id") int id, Model model) {
-		student std = new student();
-		std.setName("Nguyen Van A " + id);
-		std.setId(id*25 + 10);
-		model.addAttribute("art", std);
+		Article art = GetArticle.getSingleArticle();
+		model.addAttribute("art", art);
+
 		System.out.println("request to id: " + id);
 
-		return "HomePage/ArticleIndex";
+		return "ArticleDetail/detail";
 	}
 	
 	@RequestMapping(value = "addarticle", method = RequestMethod.POST)
