@@ -209,7 +209,7 @@
 							</div>
 						</div>
 						<span id="mainContent">
-							<p> content detail</p>
+							<p> ${art.body}</p>
 						</span>
 					</div>
 				</div>

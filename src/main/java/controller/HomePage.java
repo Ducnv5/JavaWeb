@@ -45,16 +45,12 @@ public class HomePage {
 		System.out.println("home page handler: ");
 		
 		ArrayList<HeaderItem> header = GetHeaderItems.GetHeaderItems();
+		Article art = GetArticle.getSingleArticle();
+		
 		model.addAttribute("headers", header);
-
+		model.addAttribute("art", art);
 		return "HomePage/cafef";
 	}
-	
-/*	@RequestMapping(value= {"/", "/homepage"}, method = RequestMethod.POST)
-	public String HomePagePost(Model model) {
-
-		return "HomePage/HomePage";
-	}*/
 
 	@RequestMapping(value= "article/{id}", method = RequestMethod.GET)
 	@ResponseBody
@@ -67,49 +63,6 @@ public class HomePage {
 
 		return "HomePage/ArticleIndex";
 	}
-	
-	@RequestMapping(value= "/headertop", method = RequestMethod.GET)
-	public String HeaderTop(Model model) {
-
-		return "HomePage/HeaderTop";
-	}
-	
-	@RequestMapping(value= "/headertop2", method = RequestMethod.GET)
-	public String HeaderTop2(Model model) {
-
-		return "HomePage/HeaderTop2";
-	}
-	
-	@RequestMapping(value= "/headerright", method = RequestMethod.GET)
-	public String HeaderRight(Model model) {
-
-		return "HomePage/HeaderRight";
-	}
-	
-	@RequestMapping(value= "/headerinclude", method = RequestMethod.GET)
-	public String HeaderInclude(Model model) {
-
-		return "HomePage/HeadInclude";
-	}
-	
-	@RequestMapping(value= "/dropdown", method = RequestMethod.GET)
-	public String dropDown(Model model) {
-		student std = new student();
-		std.setId(12345);
-		std.setName("name 9832r sdjhf");
-		model.addAttribute("std", std);
-		return "HomePage/dropDown";
-	}
-	
-/*	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String doLogin(Model model) {
-		System.out.println("in /login ");
-		if (!model.containsAttribute("user")) {
-			model.addAttribute("user", new User());
-		}
-		return "login";
-	}*/
-	
 	
 	@RequestMapping(value = "addarticle", method = RequestMethod.POST)
 	public String addArticle(@ModelAttribute("user") @Validated User user, BindingResult result) {

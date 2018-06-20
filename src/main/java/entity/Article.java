@@ -35,15 +35,19 @@ public class Article {
 	@NotNull(message = "group may not be null")
 	private Date input_time;
 	
-	private int id;
+	private String id;
 	
-	public Article(String header, String body, String group, String segment, int id)
+	public Article(String header, String body, String group, String segment, String id)
 	{
 		this.id = id;
 		this.header = header;
 		this.body = body;
 		this.segment = segment;
 		this.group = group;
+	}
+	public Article()
+	{
+		
 	}
 	
 	public String getHeader()
@@ -119,8 +123,8 @@ public class Article {
 		this.body = body;
 	}
 	
-	public void setId(int id)
+	public void setId(String string)
 	{
-		this.id = id;
+		this.id = string;
 	}
 }

@@ -43,8 +43,9 @@
 						Sign In
 					</span>
 				</div>
+				<h2>${message}</h2>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="<c:url value='j_spring_security_login' />" method='POST'>
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Username</span>
 						<input class="input100" type="text" name="username" placeholder="Enter username">
@@ -53,7 +54,7 @@
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Enter password">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -73,9 +74,12 @@
 					</div>
 
 					<div class="container-login100-form-btn">
+						<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Login
 						</button>
+					</div>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 					</div>
 				</form>
 			</div>

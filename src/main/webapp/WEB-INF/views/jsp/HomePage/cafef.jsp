@@ -124,10 +124,10 @@
 						<ul style="overflow: scroll">
 				            <c:forEach var="h" items="${headers}">
 				            	<li data-id="20180615135738875">
-				            		<span class="time" data-month="06" data-date="15">14:03</span>
+				            		<span class="time" data-month="06" data-date="15">${art.input_time}</span>
 				            		<span class="border_split"></span>
-				            		<a title="Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019" href="/chua-dua-vu-thu-thiem-avg-vao-chuong-trinh-giam-sat-quoc-hoi-nam-2019-20180615135738875.chn">
-				            			<span class="inner">Chưa đưa vụ Thủ Thiêm, AVG vào chương trình giám sát Quốc hội năm 2019</span>
+				            		<a title="${art.header}" href="/${art.id}">
+				            			<span class="inner">${art.header}</span>
 				            		</a>
 				            	</li>
 				            </c:forEach>
