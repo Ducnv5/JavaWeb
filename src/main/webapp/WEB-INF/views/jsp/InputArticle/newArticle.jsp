@@ -17,6 +17,8 @@
 		segment: <form:input path="segment"/> <form:errors path="segment" cssClass="error"/> <br/><br/>
 		group: <form:input path="group"/> <form:errors path="group" cssClass="error"/> <br/><br/>
 		body: <form:input path="body"/> <form:errors path="body" cssClass="error"/> <br/><br/>
+		body: <form:input path="body"/> <form:errors path="body" cssClass="error"/> <br/><br/>
+		body: <form:input path="body"/> <form:errors path="body" cssClass="error"/> <br/><br/>
      	<button type="submit">Submit</button>
 	</form:form>
 </body>

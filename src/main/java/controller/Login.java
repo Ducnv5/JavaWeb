@@ -37,7 +37,7 @@ public class Login {
 	@RequestMapping("/admin")
 	public String admin() {
 		System.out.println("login pass");
-		return "HomePage/admin";
+		return "InputArticle/newArticle";
 	}
 
 	@RequestMapping("/logout")

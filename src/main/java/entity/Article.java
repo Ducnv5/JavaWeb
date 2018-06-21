@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Article {
-	@NotNull(message = "Id may not be null")
+	@NotNull(message = "header may not be null")
 	private String header;
 	
 	@NotNull(message = "body may not be null")
@@ -32,9 +32,10 @@ public class Article {
 	@NotNull(message = "link may not be null")
 	private String href_2;
 	
-	@NotNull(message = "group may not be null")
+	
 	private Date input_time;
 	
+	@NotNull(message = "id may not be null, input short name for id")
 	private String id;
 	
 	public Article()
