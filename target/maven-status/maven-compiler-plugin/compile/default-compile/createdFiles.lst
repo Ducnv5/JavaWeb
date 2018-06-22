@@ -1,7 +1,0 @@
-entity\User.class
-model\GetArticle.class
-controller\HomePage.class
-entity\HeaderItem.class
-entity\student.class
-entity\Article.class
-model\GetHeaderItems.class
