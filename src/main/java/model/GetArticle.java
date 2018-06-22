@@ -11,8 +11,8 @@ public class GetArticle {
 	{
 		ArrayList<Article> articles = new ArrayList<Article>();
 		
-		Article a1 = new Article("football news", "this is the first news of football", "football","championleague","1");
-		Article a2 = new Article("economics news", "this is the first news of economics", "economics","stocks","2");
+		Article a1 = new Article();
+		Article a2 = new Article();
 		
 		articles.add(a1);
 		articles.add(a2);
