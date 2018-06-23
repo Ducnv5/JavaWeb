@@ -126,7 +126,7 @@
 				            	<li data-id="20180615135738875">
 				            		<span class="time" data-month="06" data-date="15">${input_time}</span>
 				            		<span class="border_split"></span>
-				            		<a title="${art.header}" href="/${art.id}">
+				            		<a title="${art.header}" href="${art.id}">
 				            			<span class="inner">${art.header}</span>
 				            		</a>
 				            	</li>
@@ -158,21 +158,23 @@
         </div>
     </div>
 </div>
+<a href="login">Login</a>
 <div class="wp1040">
 	<div class="content">
     	<div class="noibat_home clearfix">
         	<div class="news_left">
             	<div class="top5_news">
                 	<ul class="listchungkhoannew">
+                	<c:forEach var="h" items="${headers}">
                 	<li class="tlitem clearfix top" data-newsid="20180617221307997">
-			            <a class="avatar "  href="/hat-dieu-viet-nam-can-lam-mot-dau-tau-20180617221307997.chn" 
+			            <a class="avatar "  href=""/${h.href_}" 
 			            title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!">
 			            	<img src="http://cafefcdn.com/zoom/260_162/2018/6/17/photo1529248311779-15292483117791461895081.jpg" 
 			            	alt="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!" title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!" />
 			            </a>
 			            
 			            <div class="knswli-right">
-			                <h3><a href="/hat-dieu-viet-nam-can-lam-mot-dau-tau-20180617221307997.chn" title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!">H?t di?u Vi?t Nam: C?n l?m m?t d?u tàu!</a></h3>
+			                <h3><a href=""/${h.href_}" title="H?t di?u Vi?t Nam: C?n l?m m?t d?u t&#224;u!">H?t di?u Vi?t Nam: C?n l?m m?t d?u tàu!</a></h3>
 			                <p class="time_cate ">
 			                    <a href="thi-truong.chn" title="Th? tru?ng">Th? tru?ng</a> 
 			                    <span class="gachngoai">-<span> 
@@ -180,7 +182,9 @@
 			                </p>
 			                <p class="sapo">Đã tới lúc ngành điều cần vai trò của một lực lượng đủ mạnh để có thể “cầm trịch” giữ quyền chi phối giá cả cho mặt hàng mà Việt Nam đang dẫn đầu khâu chế biến và xuất khẩu của</p>
 			            </div>
+			            
         			</li>
+        			</c:forEach>
                    	</ul>
 				</div>
 			</div>
@@ -189,6 +193,6 @@
 </div>
 </div>    
 </form>
-<a href="login">Login</a>
+
 </body>
 </html>

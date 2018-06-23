@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V15</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
@@ -30,7 +30,7 @@
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/vendor/daterangepicker/daterangepicker.css"/>">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/util.css"/>">
-	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/main.css"/>">
+	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/main_login.css"/>">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -45,7 +45,7 @@
 				</div>
 				<h2>${message}</h2>
 
-				<form class="login100-form validate-form" action="<c:url value='j_spring_security_login' />" method='POST'>
+				<form name='loginForm' class="login100-form validate-form" action="<c:url value='j_spring_security_login' />" method='POST'>
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Username</span>
 						<input class="input100" type="text" name="username" placeholder="Enter username">
@@ -78,6 +78,7 @@
 						<button class="login100-form-btn">
 							Login
 						</button>
+						<input name="submit" type="submit" value="login" />
 					</div>
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 					</div>
@@ -101,7 +102,7 @@
 <!--===============================================================================================-->
 	<script src="<c:url value="/resources/vendor/countdowntime/countdowntime.js"/>"></script>
 <!--===============================================================================================-->
-	<script src="<c:url value="/resources/js/main.js"/>"></script>
+	<script src="<c:url value="/resources/js/main_login.js"/>"></script>
 
 </body>
 </html>
